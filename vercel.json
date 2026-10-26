@@ -15,11 +15,57 @@
     }
   },
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/play", "destination": "/play-monetization.html" },
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/how-to-play", "destination": "/how-to-play.html" },
-    { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/play",
+      "destination": "/play-monetization.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/how-to-play",
+      "destination": "/how-to-play.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/manual",
+      "destination": "/manual.html"
+    },
+    {
+      "source": "/units",
+      "destination": "/units.html"
+    },
+    {
+      "source": "/formations",
+      "destination": "/formations.html"
+    },
+    {
+      "source": "/morale",
+      "destination": "/morale.html"
+    },
+    {
+      "source": "/terrain",
+      "destination": "/terrain.html"
+    },
+    {
+      "source": "/tactics",
+      "destination": "/tactics.html"
+    },
+    {
+      "source": "/development",
+      "destination": "/development.html"
+    }
   ]
 }
