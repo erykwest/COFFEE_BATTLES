@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="A transparent account of Coffee Battles game systems and recent development work: unit catalogue, AI, fog of war, multiplayer and ongoing improvements.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Development Notes | Coffee Battles">
+<meta property="og:description" content="A transparent account of Coffee Battles game systems and recent development work: unit catalogue, AI, fog of war, multiplayer and ongoing improvements.">
+<meta property="og:url" content="https://coffeebattles.online/development">
+<link rel="canonical" href="https://coffeebattles.online/development">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/site.css">
+<title>Development Notes | Coffee Battles</title>
+</head>
+<body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="/">Coffee Battles</a><div class="nav-links"><a href="/manual" aria-current="page">Field Manual</a><a href="/how-to-play">How to play</a><a href="/about">About</a><a class="play" href="/play">Play</a></div></nav></header>
+<main class="shell manual-layout"><div class="manual-breadcrumb"><a href="/">Home</a> / <a href="/manual">Field Manual</a> / Development Notes</div>
+<div class="manual-columns"><article class="prose manual-article">
+<p class="manual-kicker">Field Manual / Behind the simulation</p><h1>Development Notes</h1><p class="lead">Coffee Battles is playable now, and its systems are being improved in public. These notes separate what players can use today from areas still being refined.</p>
+<h2>What the current build contains</h2>
+<p>The publicly accessible game already includes army setup, a points-based unit catalogue, deployment, real-time orders, three formations, ranged attacks, fatigue, morale, terrain obstacles, fog of war and a result screen. It runs directly in the browser and does not require a personal account to start a battle.</p>
+<p>The system is intentionally simulation-oriented. Movement and orders interact with physical formation sizes, facing, roadblocks, line of sight and morale rather than with a single abstract strength number. A visible battle therefore offers both a game and a way to observe how small tactical choices change outcomes.</p>
+<h2>Selected changes from the public repository</h2>
+<p>These entries describe publicly recorded changes, not invented milestones or promises of a final release date. For the complete sequence of commits, see the <a href="https://github.com/erykwest/COFFEE_BATTLES/commits/main" rel="noopener noreferrer">development history on GitHub</a>.</p>
+<div class="manual-timeline">
+<section><time datetime="2026-10-02">2 October 2026</time><h3>Battle visibility, deployment and match flow</h3><p>Recent commits restored battlefield fog of war, adjusted the deployment builder position, repaired terrain/grid rendering after setup, added a countdown and rout timeout, blocked movement over sea terrain and changed multiplayer start behaviour to begin at normal speed. These were individual implementation and repair changes; they should not be read as a guarantee that every multiplayer edge case has been resolved.</p></section>
+<section><time datetime="2026-10-01">1 October 2026</time><h3>Monetization controls added to the game shell</h3><p>Buy Me a Coffee buttons and sponsorship placeholders were integrated around the setup and battle-result views without changing the battle simulator itself. Sponsor placeholders are not paid Google advertisements. Ad-serving approval is independent of these controls, and support contributions are optional.</p></section>
+<section><time datetime="2026-09-30">30 September 2026</time><h3>Ongoing simulation and interface improvements</h3><p>Work around regiment representation, multi-language interface content and deterministic simulation testing continued around this period. The game is designed so changes can be tested against repeatable scenarios as well as observed interactively.</p></section>
+</div>
+<h2>What is still changing</h2>
+<p>Balancing eight troop types is not a single pass. A charge that is too powerful or an automatic targeting rule that behaves unexpectedly can change the value of an entire class of regiment. Terrain handling, intelligence, user interface details and multiplayer coordination also need continued testing. Public development means features may be corrected or adjusted rather than remaining frozen after their first implementation.</p>
+<p>For that reason, the <a href="/units">unit reference</a> documents the current code-defined values, the <a href="/formations">formation guide</a> explains the practical effects and the <a href="/tactics">exercise guide</a> suggests short tests. These resources are maintained as a description of the playable system, not marketing copy for future features.</p>
+<h2>How to follow or contribute</h2>
+<p>You can <a href="/play">play the game</a> without an account, inspect the <a href="https://github.com/erykwest/COFFEE_BATTLES" rel="noopener noreferrer">public repository</a> or <a href="/contact">send reproducible feedback</a>. A useful bug report includes the map type, unit composition, last orders before the failure and what actually happened. Avoid posting personal details or payment information in public issue threads.</p>
+<p>Supporting development through Buy Me a Coffee is optional. Access to the core game and its field manual does not depend on making a contribution. Advertising, where enabled, is handled separately from game rules and purchases.</p>
+<section class="manual-related"><h2>Read next</h2><div class="manual-related-links"><a href="/manual">Browse the field manual →</a><a href="/tactics">Run an experiment →</a><a href="/about">About the project →</a></div></section>
+<p class="manual-endnote">This guide describes the published game mechanics and practical uses for them. Balance and interface details may change as Coffee Battles evolves. <a href="/play">Play the current build</a> or <a href="/contact">report an issue</a>.</p>
+</article>
+<aside class="manual-side" aria-label="Field Manual chapters"><div class="manual-side-title">Field Manual</div><ol><li><a href="/manual">Field Manual</a></li><li><a href="/units">Units & army building</a></li><li><a href="/formations">Formations & facing</a></li><li><a href="/morale">Morale & fatigue</a></li><li><a href="/terrain">Terrain & visibility</a></li><li><a href="/tactics">Tactical scenarios</a></li><li><a href="/development" aria-current="page">Development notes</a></li></ol><a href="/play" class="btn primary manual-side-cta">Play a battle</a></aside>
+</div></main><footer class="footer"><div class="footer-inner"><span>© 2026 Coffee Battles · Field Manual in English</span><div class="footer-links"><a href="/manual">Field Manual</a><a href="/privacy">Privacy</a><a href="/contact">Contact</a><a href="https://github.com/erykwest/COFFEE_BATTLES" rel="noopener noreferrer">GitHub</a></div></div></footer>
+</body>
+</html>
