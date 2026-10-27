@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-<header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="/">Coffee Battles</a><div class="nav-links"><a href="/how-to-play" data-i18n="nav.how">How to play</a><a href="/about" data-i18n="nav.about">About</a><select id="siteLanguageSelect" class="lang-select" aria-label="Language" title="Language"><option value="en">English</option><option value="it">Italiano</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ru">Русский</option></select><a class="play" href="/play" data-i18n="nav.play">Play</a></div></nav></header>
+<header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="/">Coffee Battles</a><div class="nav-links"><a href="/manual" data-i18n="nav.manual">Field Manual</a><a href="/how-to-play" data-i18n="nav.how">How to play</a><a href="/about" data-i18n="nav.about">About</a><select id="siteLanguageSelect" class="lang-select" aria-label="Language" title="Language"><option value="en">English</option><option value="it">Italiano</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ru">Русский</option></select><a class="play" href="/play" data-i18n="nav.play">Play</a></div></nav></header>
 <main>
 <section class="hero"><div class="shell">
   <div class="hero-copy">
@@ -30,10 +30,30 @@
   </ol>
   <div class="cta-row"><a class="btn primary" href="/play" data-i18n="cta.play">Play now</a></div>
 </div></section>
+
+<section class="section manual-teaser"><div class="shell">
+<p class="manual-kicker" data-i18n="manual.kicker">Field Manual</p>
+<h2 data-i18n="manual.title">Learn what makes a battle turn</h2>
+<p class="lead" data-i18n="manual.lead">Explore practical guides based on the playable rules: compare units, control frontage and use the ground rather than charging blindly.</p>
+<div class="manual-card-grid">
+<a class="manual-card" href="/units"><span>01 / Army</span><strong data-i18n="manual.units.title">Units &amp; army building</strong><small data-i18n="manual.units.body">Compare all eight regiment types, point costs and battlefield roles.</small></a>
+<a class="manual-card" href="/formations"><span>02 / Contact</span><strong data-i18n="manual.form.title">Formations &amp; facing</strong><small data-i18n="manual.form.body">Learn why line, column and flank contact change a fight.</small></a>
+<a class="manual-card" href="/tactics"><span>03 / Practice</span><strong data-i18n="manual.tactics.title">Tactical scenarios</strong><small data-i18n="manual.tactics.body">Six exercises you can try in your next match.</small></a>
+</div><div class="cta-row"><a class="btn" href="/manual" data-i18n="nav.manual">Field Manual</a></div>
+</div></section>
 </main>
-<footer class="footer"><div class="footer-inner"><span>© 2026 Coffee Battles</span><div class="footer-links"><a href="/about" data-i18n="nav.about">About</a><a href="/how-to-play" data-i18n="nav.how">How to play</a><a href="/privacy" data-i18n="nav.privacy">Privacy</a><a href="/contact" data-i18n="nav.contact">Contact</a><a href="https://github.com/erykwest/COFFEE_BATTLES" rel="noopener">GitHub</a></div></div></footer>
+<footer class="footer"><div class="footer-inner"><span>© 2026 Coffee Battles</span><div class="footer-links"><a href="/manual" data-i18n="nav.manual">Field Manual</a><a href="/about" data-i18n="nav.about">About</a><a href="/how-to-play" data-i18n="nav.how">How to play</a><a href="/privacy" data-i18n="nav.privacy">Privacy</a><a href="/contact" data-i18n="nav.contact">Contact</a><a href="https://github.com/erykwest/COFFEE_BATTLES" rel="noopener">GitHub</a></div></div></footer>
 <script>window.PAGE_STRINGS={
  "en": {
+  "manual.kicker": "Field Manual",
+  "manual.title": "Learn what makes a battle turn",
+  "manual.lead": "Explore practical guides based on the playable rules: compare units, control frontage and use the ground rather than charging blindly.",
+  "manual.units.title": "Units & army building",
+  "manual.units.body": "Compare all eight regiment types, point costs and battlefield roles.",
+  "manual.form.title": "Formations & facing",
+  "manual.form.body": "Learn why line, column and flank contact change a fight.",
+  "manual.tactics.title": "Tactical scenarios",
+  "manual.tactics.body": "Six exercises you can try in your next match.",
   "hero.title": "Take a break.<br>Grab a coffee.<br>Fight a battle.",
   "hero.lead": "Real-time tactical battles that fit in a coffee break: ten minutes at most, in your browser, no account.",
   "hero.alt": "A battle in progress: blue and red regiments meet across a road between hills.",
@@ -48,6 +68,15 @@
   "meta.description": "Real-time tactical battles that fit in a coffee break: ten minutes at most, in your browser, no account."
  },
  "it": {
+  "manual.kicker": "Manuale tattico",
+  "manual.title": "Le regole dietro ogni battaglia",
+  "manual.lead": "Guide pratiche tratte dalle regole reali: confronta le unità, gestisci il fronte e sfrutta il terreno invece di caricare alla cieca.",
+  "manual.units.title": "Unità e composizione dell'esercito",
+  "manual.units.body": "Confronta gli otto reggimenti, i costi e i loro ruoli.",
+  "manual.form.title": "Formazioni e orientamento",
+  "manual.form.body": "Scopri come linea, colonna e attacchi sul fianco cambiano uno scontro.",
+  "manual.tactics.title": "Esercizi tattici",
+  "manual.tactics.body": "Sei esercizi da provare nella prossima partita.",
   "hero.title": "Fai una pausa.<br>Prendi un caffè.<br>Combatti una battaglia.",
   "hero.lead": "Battaglie tattiche in tempo reale che stanno in una pausa caffè: dieci minuti al massimo, nel browser, senza account.",
   "hero.alt": "Una battaglia in corso: reggimenti blu e rossi si affrontano lungo una strada tra le colline.",
@@ -62,6 +91,15 @@
   "meta.description": "Battaglie tattiche in tempo reale che stanno in una pausa caffè: dieci minuti al massimo, nel browser, senza account."
  },
  "es": {
+  "manual.kicker": "Manual táctico",
+  "manual.title": "Entiende las decisiones que cambian una batalla",
+  "manual.lead": "Guías basadas en las reglas jugables: compara unidades, controla el frente y aprovecha el terreno.",
+  "manual.units.title": "Unidades y ejércitos",
+  "manual.units.body": "Compara los ocho regimientos, sus costes y funciones.",
+  "manual.form.title": "Formaciones y orientación",
+  "manual.form.body": "Descubre por qué importan la línea, la columna y los flancos.",
+  "manual.tactics.title": "Ejercicios tácticos",
+  "manual.tactics.body": "Seis ejercicios para tu próxima partida.",
   "hero.title": "Haz una pausa.<br>Toma un café.<br>Libra una batalla.",
   "hero.lead": "Batallas tácticas en tiempo real que caben en una pausa para el café: diez minutos como máximo, en tu navegador, sin cuenta.",
   "hero.alt": "Una batalla en curso: regimientos azules y rojos se enfrentan junto a un camino entre colinas.",
@@ -76,6 +114,15 @@
   "meta.description": "Batallas tácticas en tiempo real que caben en una pausa para el café: diez minutos como máximo, en tu navegador, sin cuenta."
  },
  "fr": {
+  "manual.kicker": "Manuel tactique",
+  "manual.title": "Comprendre les choix qui changent une bataille",
+  "manual.lead": "Des guides tirés des règles jouables : comparez les unités, maîtrisez les fronts et exploitez le terrain.",
+  "manual.units.title": "Unités et armées",
+  "manual.units.body": "Comparez les huit régiments, leurs coûts et leurs rôles.",
+  "manual.form.title": "Formations et orientation",
+  "manual.form.body": "Pourquoi la ligne, la colonne et les flancs changent un combat.",
+  "manual.tactics.title": "Exercices tactiques",
+  "manual.tactics.body": "Six exercices à essayer lors de votre prochaine partie.",
   "hero.title": "Faites une pause.<br>Prenez un café.<br>Livrez bataille.",
   "hero.lead": "Des batailles tactiques en temps réel qui tiennent dans une pause café : dix minutes au plus, dans votre navigateur, sans compte.",
   "hero.alt": "Une bataille en cours : des régiments bleus et rouges s’affrontent le long d’une route entre des collines.",
@@ -90,6 +137,15 @@
   "meta.description": "Des batailles tactiques en temps réel qui tiennent dans une pause café : dix minutes au plus, dans votre navigateur, sans compte."
  },
  "de": {
+  "manual.kicker": "Taktikhandbuch",
+  "manual.title": "Verstehe, was eine Schlacht entscheidet",
+  "manual.lead": "Praxisnahe Anleitungen auf Basis der Spielregeln: Einheiten vergleichen, Fronten kontrollieren und Gelände nutzen.",
+  "manual.units.title": "Einheiten und Armeen",
+  "manual.units.body": "Vergleiche alle acht Regimenter, Kosten und Rollen.",
+  "manual.form.title": "Formationen und Ausrichtung",
+  "manual.form.body": "Wie Linie, Kolonne und Flankenangriffe den Kampf verändern.",
+  "manual.tactics.title": "Taktische Übungen",
+  "manual.tactics.body": "Sechs Übungen für dein nächstes Gefecht.",
   "hero.title": "Mach eine Pause.<br>Hol dir einen Kaffee.<br>Kämpfe eine Schlacht.",
   "hero.lead": "Taktische Echtzeitschlachten für die Kaffeepause: höchstens zehn Minuten, im Browser, ohne Konto.",
   "hero.alt": "Eine laufende Schlacht: blaue und rote Regimenter treffen an einer Straße zwischen Hügeln aufeinander.",
@@ -104,6 +160,15 @@
   "meta.description": "Taktische Echtzeitschlachten für die Kaffeepause: höchstens zehn Minuten, im Browser, ohne Konto."
  },
  "ru": {
+  "manual.kicker": "Тактическое руководство",
+  "manual.title": "Пойми, что решает исход битвы",
+  "manual.lead": "Практические материалы по игровым правилам: сравнение отрядов, управление фронтом и использование местности.",
+  "manual.units.title": "Отряды и армия",
+  "manual.units.body": "Сравни восемь типов отрядов, стоимость и роли.",
+  "manual.form.title": "Построения и фланги",
+  "manual.form.body": "Почему линия, колонна и фланговый удар меняют исход схватки.",
+  "manual.tactics.title": "Тактические упражнения",
+  "manual.tactics.body": "Шесть упражнений для следующего боя.",
   "hero.title": "Сделай перерыв.<br>Возьми кофе.<br>Вступи в бой.",
   "hero.lead": "Тактические бои в реальном времени на один кофе-брейк: не дольше десяти минут, прямо в браузере, без регистрации.",
   "hero.alt": "Идёт бой: синие и красные полки сходятся у дороги между холмами.",

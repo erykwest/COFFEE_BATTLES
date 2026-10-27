@@ -4,6 +4,7 @@
   var KEY='coffee-battles-language';
   var COMMON={
  "en": {
+  "nav.manual": "Field Manual",
   "nav.about": "About",
   "nav.how": "How to play",
   "nav.privacy": "Privacy",
@@ -13,6 +14,7 @@
   "cta.how": "How to play"
  },
  "it": {
+  "nav.manual": "Manuale tattico",
   "nav.about": "Info",
   "nav.how": "Come si gioca",
   "nav.privacy": "Privacy",
@@ -22,6 +24,7 @@
   "cta.how": "Come si gioca"
  },
  "es": {
+  "nav.manual": "Manual táctico",
   "nav.about": "Acerca de",
   "nav.how": "Cómo jugar",
   "nav.privacy": "Privacidad",
@@ -31,6 +34,7 @@
   "cta.how": "Cómo se juega"
  },
  "fr": {
+  "nav.manual": "Manuel tactique",
   "nav.about": "À propos",
   "nav.how": "Comment jouer",
   "nav.privacy": "Confidentialité",
@@ -40,6 +44,7 @@
   "cta.how": "Comment jouer"
  },
  "de": {
+  "nav.manual": "Taktikhandbuch",
   "nav.about": "Über",
   "nav.how": "Spielanleitung",
   "nav.privacy": "Datenschutz",
@@ -49,6 +54,7 @@
   "cta.how": "Spielanleitung"
  },
  "ru": {
+  "nav.manual": "Тактическое руководство",
   "nav.about": "О проекте",
   "nav.how": "Как играть",
   "nav.privacy": "Конфиденциальность",
