@@ -161,3 +161,43 @@ h3{font-weight:800;font-size:28px;letter-spacing:.02em}
   .manual-diagrams figure{min-height:140px}
   .manual-article{padding-top:20px}
 }
+
+/* Documentation sponsor rails — placeholder inventory, NOT live AdSense units.
+   Show only when both rails and readable documentation fit without overlap. */
+.sponsor-rail{
+  display:none;
+  box-sizing:border-box;width:160px;height:600px;max-height:calc(100vh - 140px);
+  flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  border:1px dashed rgba(224,138,60,.55);border-radius:18px;
+  background:rgba(23,15,12,.72);color:var(--muted);text-align:center;
+  pointer-events:none;user-select:none;overflow:hidden;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+}
+.sponsor-rail__kicker{font-size:10px;font-weight:800;letter-spacing:.18em;color:var(--accent)}
+.sponsor-rail__cup{font-size:34px;line-height:1;opacity:.75}
+.sponsor-rail__label{font-size:13px;line-height:1.25;letter-spacing:.05em}
+.sponsor-rail__size{font-size:10px;opacity:.75}
+/* The existing How-to-play column is <=760px, leaving 160px on either side. */
+@media(min-width:1320px){
+  .sponsor-doc-grid--guide{
+    display:grid;grid-template-columns:160px minmax(0,760px) 160px;
+    gap:40px;justify-content:center;align-items:start;
+  }
+  .sponsor-doc-grid--guide > .prose{grid-column:2;grid-row:1;min-width:0}
+  .sponsor-doc-grid--guide > .sponsor-rail{display:flex;position:sticky;top:100px;margin-top:64px}
+  .sponsor-doc-grid--guide > .sponsor-rail--left{grid-column:1;grid-row:1}
+  .sponsor-doc-grid--guide > .sponsor-rail--right{grid-column:3;grid-row:1}
+}
+/* Field Manual has a 260px chapter index as well; reserve space rather than overlap it. */
+@media(min-width:1750px){
+  .manual-layout.shell{width:min(1640px,calc(100% - 48px))}
+  .manual-columns.sponsor-doc-grid--manual{
+    display:grid;grid-template-columns:160px minmax(0,1fr) 260px 160px;
+    gap:28px;align-items:start;
+  }
+  .sponsor-doc-grid--manual > .manual-article{grid-column:2;grid-row:1;min-width:0}
+  .sponsor-doc-grid--manual > .manual-side{grid-column:3;grid-row:1}
+  .sponsor-doc-grid--manual > .sponsor-rail{display:flex;position:sticky;top:100px;margin-top:34px}
+  .sponsor-doc-grid--manual > .sponsor-rail--left{grid-column:1;grid-row:1}
+  .sponsor-doc-grid--manual > .sponsor-rail--right{grid-column:4;grid-row:1}
+}
