@@ -135,6 +135,72 @@
     endOverlay.prepend(makeAdRail('left', 'battle-end'));
     endOverlay.append(makeAdRail('right', 'battle-end'));
   }
+
+  // Traffic funnel: non-blocking Vercel Web Analytics events.
+  // Kept in the game's injected document so the existing monetization shell
+  // and current single-player/multiplayer runtime remain untouched.
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+  const analyticsCountKey = 'coffee-battles-session-battle-count';
+  let analyticsBattleCount = 0;
+  try {
+    analyticsBattleCount = Number.parseInt(sessionStorage.getItem(analyticsCountKey) || '0', 10) || 0;
+  } catch (_) {}
+  let analyticsLastCompleted = analyticsBattleCount;
+  const analyticsTrack = (name, data) => {
+    try { window.va('event', { name, data }); } catch (_) {}
+  };
+  const analyticsMode = () =>
+    document.querySelector('#setupModes button.active')?.dataset?.mode || 'unknown';
+  const analyticsPoints = () => {
+    const value = document.getElementById('setupPointsSummary')?.textContent || '';
+    return Number.parseInt(value.replace(/\\D+/g, ''), 10) || 0;
+  };
+  const analyticsBiome = () =>
+    document.getElementById('mapBiomeSelect')?.value || 'unknown';
+  const analyticsResult = () => {
+    const title = document.getElementById('battleEndTitle');
+    if (title?.classList.contains('victory')) return 'victory';
+    if (title?.classList.contains('defeat')) return 'defeat';
+    if (title?.classList.contains('draw')) return 'draw';
+    return 'unknown';
+  };
+  document.getElementById('createBattleBtn')?.addEventListener('click', () => {
+    if (!document.body.classList.contains('deployment-active')) return;
+    analyticsTrack('deployment_opened', {
+      mode: analyticsMode(), points: analyticsPoints()
+    });
+  });
+  document.getElementById('startBattleFromDeployBtn')?.addEventListener('click', () => {
+    // In single-player, finish() synchronously removes deployment-active
+    // only after both armies pass validation.
+    if (document.body.classList.contains('deployment-active')) return;
+    analyticsBattleCount += 1;
+    try { sessionStorage.setItem(analyticsCountKey, String(analyticsBattleCount)); } catch (_) {}
+    analyticsTrack('battle_started', {
+      battle: analyticsBattleCount, biome: analyticsBiome()
+    });
+    if (analyticsBattleCount === 2) {
+      analyticsTrack('second_battle_started', {
+        mode: analyticsMode(), biome: analyticsBiome()
+      });
+    }
+  });
+  const analyticsEndOverlay = document.getElementById('battleEndOverlay');
+  if (analyticsEndOverlay) {
+    let analyticsWasOpen = analyticsEndOverlay.classList.contains('open');
+    new MutationObserver(() => {
+      const isOpen = analyticsEndOverlay.classList.contains('open');
+      if (isOpen && !analyticsWasOpen && analyticsBattleCount > analyticsLastCompleted) {
+        analyticsLastCompleted = analyticsBattleCount;
+        analyticsTrack('battle_completed', {
+          battle: analyticsBattleCount, result: analyticsResult()
+        });
+      }
+      analyticsWasOpen = isOpen;
+    }).observe(analyticsEndOverlay, { attributes: true, attributeFilter: ['class'] });
+  }
 })();
 <\/script>`;
 
@@ -144,7 +210,7 @@
       return r.text();
     })
     .then(html => {
-      html = html.replace('</head>', monetizationCss + '\n</head>');
+      html = html.replace('</head>', '<script defer src="/_vercel/insights/script.js"><\/script>\n' + monetizationCss + '\n</head>');
       html = html.replace('</body>', injector + '\n</body>');
       document.open();
       document.write(html);
