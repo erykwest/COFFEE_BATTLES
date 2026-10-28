@@ -81,4 +81,13 @@
   var sel=document.getElementById('siteLanguageSelect');
   if(sel)sel.addEventListener('change',function(e){apply(e.target.value,true);});
   apply(stored()||'en',false);
+  // Pageviews for all static site pages sharing this script.
+  // The game route loads the same analytics script in its generated document.
+  if (!document.querySelector('script[data-coffee-analytics]')) {
+    var analytics=document.createElement('script');
+    analytics.src='/_vercel/insights/script.js';
+    analytics.defer=true;
+    analytics.dataset.coffeeAnalytics='1';
+    document.head.appendChild(analytics);
+  }
 })();
