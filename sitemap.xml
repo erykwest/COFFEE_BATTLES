@@ -6,4 +6,11 @@
   <url><loc>https://coffeebattles.online/privacy</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://coffeebattles.online/contact</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://coffeebattles.online/play</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://coffeebattles.online/manual</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://coffeebattles.online/units</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://coffeebattles.online/formations</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://coffeebattles.online/morale</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://coffeebattles.online/terrain</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://coffeebattles.online/tactics</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://coffeebattles.online/development</loc><changefreq>monthly</changefreq></url>
 </urlset>
